@@ -78,7 +78,7 @@ callback = EarlyStopping(
     restore_best_weights=True
 )
 
-model.fit(X_train, y_train, epochs=200, initial_epoch=5 ,validation_data=(X_test, y_test), callbacks=callback)
+model.fit(X_train, y_train, epochs=200, initial_epoch=5, batch_size=64 ,validation_data=(X_test, y_test), callbacks=callback)
 
 predictions = model.predict(X_test)
 predictions = np.where(predictions > 0.45, 1,0)
