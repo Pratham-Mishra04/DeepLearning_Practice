@@ -2,3 +2,5 @@
 /**/tuners
 /**/*.joblib
 /**/*.csv
+/**/*.zip
+/**/**/model
